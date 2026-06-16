@@ -1,0 +1,14 @@
+{
+  "3Cbq7aT1tY8kMxWLbitaG7yT6bPbKChq64": { "label": "Binance BTC", "ip": "192.168.10.2" },
+  "3JZq4atUahhuA9rLhXLMhhTo133J9rF97j": { "label": "Coinbase BTC", "ip": "192.168.10.3" },
+  "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx": { "label": "Bitfinex BTC", "ip": "192.168.10.4" },
+  "0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be": { "label": "Binance ETH", "ip": "192.168.10.10" },
+  "0x742d35cc6634c0532925a3b844bc454e4438f44e": { "label": "Bitfinex ETH", "ip": "192.168.10.11" },
+  "0x503828976d22510aad0201ac7ec88293211d23da": { "label": "Coinbase ETH", "ip": "192.168.10.12" },
+  "4eD8h6q8quznh4KgfPxrpyKPoy9v2VZcZ4WXLcVrWBFk": { "label": "Binance SOL", "ip": "192.168.10.20" },
+  "CuiexbmAd7QiyJ3F66vJKm8enFc8SvyCskEp2teSeT75": { "label": "Coinbase SOL", "ip": "192.168.10.21" },
+  "GdQ64bSzo9m36cuTcnLPZcCJo7hx6efr6nAq3iPLsUif": { "label": "OKX SOL", "ip": "192.168.10.22" },
+  "0x4f62013333402d777c0c5337f14e1f5888815316": { "label": "Binance Wallet","ip": "192.168.1.20"  },
+  "0x742d35Cc6634C0532925a3b844Bc454e4438f44e": {    "label": "Bitfinex",    "ip": "192.168.1.21"  },
+  "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa": { "label": "Dark Web Mixer", "ip": "10.0.0.1" }
+}

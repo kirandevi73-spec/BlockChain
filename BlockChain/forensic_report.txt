@@ -1,0 +1,9 @@
+🔍 Blockchain Forensics Report
+================================
+Total Addresses: 49
+Total Transactions: 64
+Suspicious Addresses: 2
+
+⚠️ Suspicious Nodes:
+- bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh (Risk: 70, Reason: High degree centrality (hub activity))
+- 3KMmeqPeQcngyTehdfSwsGqvxfU7J7qtc8 (Risk: 58, Reason: High degree centrality (hub activity))

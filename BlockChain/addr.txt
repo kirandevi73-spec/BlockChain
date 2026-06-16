@@ -1,0 +1,4 @@
+SENDER=bc1pujhdzardutnphcewsx8upy6s4f4r4qmc4uvsq7pss7zh2vnv9kws95xyx2
+TO=1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+TO=1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+TO=bc1pujhdzardutnphcewsx8upy6s4f4r4qmc4uvsq7pss7zh2vnv9kws95xyx2

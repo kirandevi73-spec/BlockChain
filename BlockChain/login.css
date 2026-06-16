@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+}
+
+.container {
+    position: relative;
+    width: 750px;
+    height: 550px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Forms Positioning and Transition */
+.container .form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+/* Initial state for Login Form */
+.container .form-box.login {
+    left: 0;
+    transform: translateX(0); /* Visible and in place */
+    opacity: 1;
+    z-index: 2; /* On top of the register form */
+}
+
+/* Initial state for Register Form */
+.container .form-box.register {
+    left: 50%; /* Position it to the right half */
+    transform: translateX(100%); /* Move it completely off-screen to the right */
+    opacity: 0; /* Make it invisible */
+    z-index: 1; /* Behind the login form */
+}
+
+.form-box h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #ccc;
+    outline: none;
+    border-radius: 40px;
+    padding: 15px 45px 15px 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-box input::placeholder {
+    color: #888;
+}
+
+.input-box .bx {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #888;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.remember-forgot label input {
+    accent-color: #3a7bd5;
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    color: #3a7bd5;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #3a7bd5;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2a6bb5;
+}
+
+.btn.transparent {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn.transparent:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-login p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    border-radius: 50%;
+    color: #333;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #3a7bd5;
+    color: #fff;
+}
+
+/* Panels for sliding animation */
+.container .panel {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, #00d2ff, #3a7bd5);
+    z-index: 10; /* Panels are initially on top of forms */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 40px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.container .panel.left-panel {
+    left: 0;
+    transform: translateX(0); /* Left panel starts visible */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.container .panel.right-panel {
+    right: 0;
+    transform: translateX(0); /* Right panel starts visible */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.panel h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.panel p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* --- Animation states controlled by JavaScript (when .sign-up-mode is added) --- */
+
+.container.sign-up-mode .left-panel {
+    transform: translateX(-100%); /* Move left panel to the left, revealing forms */
+}
+
+.container.sign-up-mode .right-panel {
+    transform: translateX(100%); /* Move right panel to the right, revealing forms */
+}
+
+/* Adjust forms when in sign-up mode */
+.container.sign-up-mode .form-box.login {
+    transform: translateX(-100%); /* Move login form off-screen to the left */
+    opacity: 0;
+    z-index: 1; /* Hide login form behind the register form */
+}
+
+.container.sign-up-mode .form-box.register {
+    transform: translateX(0); /* Bring register form into view from the right */
+    opacity: 1;
+    z-index: 2; /* Bring register form to front */
+}
+
+/* Ensure the panels and forms move correctly when NOT in sign-up mode (i.e., when login form is active) */
+.container:not(.sign-up-mode) .left-panel {
+    transform: translateX(0); /* Left panel stays in place */
+}
+
+.container:not(.sign-up-mode) .right-panel {
+    transform: translateX(0); /* Right panel stays in place */
+}
+.container:not(.sign-up-mode) .form-box.login {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 2;
+}
+.container:not(.sign-up-mode) .form-box.register {
+    transform: translateX(100%); /* Keeps register form off-screen */
+    opacity: 0;
+    z-index: 1;
+}
