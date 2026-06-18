@@ -2,22 +2,38 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.py",
+      "src": "BlockChain/server.py",
       "use": "@vercel/python"
     },
     {
-      "src": "login.html",
+      "src": "BlockChain/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "BlockChain/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "BlockChain/*.js",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server.py"
+      "dest": "BlockChain/server.py"
+    },
+    {
+      "src": "/login.css",
+      "dest": "BlockChain/login.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "BlockChain/script.js"
     },
     {
       "src": "/",
-      "dest": "login.html"
+      "dest": "BlockChain/login.html"
     }
   ]
 }
